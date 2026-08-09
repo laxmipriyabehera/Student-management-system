@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import DashboardCards from "./components/DashboardCards";
@@ -21,6 +21,23 @@ function App() {
   
   const [students, setStudents]= useState([]);
   const [editingStudent, setEditingStudent] = useState(null);
+
+  useEffect(() => {
+  const savedStudents = JSON.parse(
+    localStorage.getItem("students")
+  );
+
+  if (savedStudents) {
+    setStudents(savedStudents);
+  }
+}, []);
+
+useEffect(() => {
+  localStorage.setItem(
+    "students",
+    JSON.stringify(students)
+  );
+}, [students]);
   return (
      <BrowserRouter>
       <Navbar />
