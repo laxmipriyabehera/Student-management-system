@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -109,7 +110,9 @@ const handleEdit = (student) => {
                     <span className="status active">{student.status}</span>
                   </td>
                   <td>
-                    <button className="edit-btn"
+                    <Link to={`/students/${student.id}`}
+                      className="view-btn">View</Link>
+                   <button className="edit-btn"
                     onClick={()=> handleEdit(student)}>Edit</button>
                     <button className="delete-btn"
                     onClick={()=> handleDelete(student.id)}>Delete</button>

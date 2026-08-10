@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import DashboardCards from "./components/DashboardCards";
 import Students from "./pages/Students";
 import AddStudent from "./pages/AddStudent";
+import StudentDetails from "./pages/StudentDetails";
 import "./App.css";
 
 function Dashboard({ students }) {
@@ -33,7 +34,7 @@ const recentStudents = [...students].reverse().slice(0, 5);
         activeStudents={activeStudents}
         inactiveStudents={inactiveStudents}
         totalCourses={totalCourses}/>
-        
+
           <div className="recent-students">
   <h2>Recent Students</h2>
 
@@ -103,6 +104,8 @@ useEffect(() => {
               <Students students={students} 
               setStudents={setStudents}
               setEditingStudent={setEditingStudent}/>} />
+            <Route path="/students/:id"
+               element={<StudentDetails students={students} />}/>
             <Route path="/add-student" element={
               <AddStudent setStudents={setStudents}
               editingStudent={editingStudent} />} />
