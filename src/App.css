@@ -131,6 +131,18 @@ body {
   color: #1e293b;
 }
 
+@media (max-width: 900px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Students Page */
 
 .students-page {
@@ -338,4 +350,51 @@ body {
 .student-filters input:focus,
 .student-filters select:focus {
   border-color: #2563eb;
+}
+
+/* Recent Students */
+
+.recent-students {
+  margin-top: 35px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.recent-students h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #1e293b;
+}
+
+.recent-students table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-students th,
+.recent-students td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.recent-students th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 14px;
+}
+
+.recent-students td {
+  color: #334155;
+  font-size: 14px;
+}
+
+.recent-students tr:last-child td {
+  border-bottom: none;
+}
+
+.recent-students tr:hover {
+  background: #f8fafc;
 }

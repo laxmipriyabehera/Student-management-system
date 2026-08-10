@@ -1,4 +1,4 @@
-function DashboardCards() {
+function DashboardCards({ totalStudents, activeStudents, inactiveStudents, totalCourses }) {
   return (
     <div className="dashboard-cards">
 
@@ -6,7 +6,7 @@ function DashboardCards() {
         <div className="card-icon">👨‍🎓</div>
         <div>
           <h3>Total Students</h3>
-          <p>120</p>
+          <p>{totalStudents}</p>
         </div>
       </div>
 
@@ -14,7 +14,7 @@ function DashboardCards() {
         <div className="card-icon">📚</div>
         <div>
           <h3>Total Courses</h3>
-          <p>8</p>
+          <p>{totalCourses}</p>
         </div>
       </div>
 
@@ -22,7 +22,7 @@ function DashboardCards() {
         <div className="card-icon">✅</div>
         <div>
           <h3>Active Students</h3>
-          <p>100</p>
+          <p>{activeStudents}</p>
         </div>
       </div>
 
@@ -30,7 +30,7 @@ function DashboardCards() {
         <div className="card-icon">❌</div>
         <div>
           <h3>Inactive Students</h3>
-          <p>20</p>
+          <p>{inactiveStudents}</p>
         </div>
       </div>
 
