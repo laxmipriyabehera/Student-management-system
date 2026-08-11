@@ -105,7 +105,8 @@ useEffect(() => {
               setStudents={setStudents}
               setEditingStudent={setEditingStudent}/>} />
             <Route path="/students/:id"
-               element={<StudentDetails students={students} />}/>
+               element={<StudentDetails students={students} 
+               setEditingStudent={setEditingStudent} />}/>
             <Route path="/add-student" element={
               <AddStudent setStudents={setStudents}
               editingStudent={editingStudent} />} />

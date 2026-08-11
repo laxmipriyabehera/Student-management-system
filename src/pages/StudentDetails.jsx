@@ -1,7 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-function StudentDetails({ students }) {
+function StudentDetails({ students, setEditingStudent }) {
   const { id } = useParams();
+
+  const navigate = useNavigate();
 
   const student = students.find(
     (item) => item.id === Number(id)
@@ -13,6 +15,24 @@ function StudentDetails({ students }) {
 
   return (
     <div className="student-details">
+      <div className="details-actions">
+  <button
+    className="back-btn"
+    onClick={() => navigate("/students")}>
+    ← Back to Students
+  </button>
+
+  <button
+    className="edit-btn"
+    onClick={() => {
+      setEditingStudent(student);
+      navigate("/add-student");
+    }}
+  >
+    ✏️ Edit Student
+  </button>
+</div>
+      
       <h1>Student Details</h1>
 
       <div className="details-card">

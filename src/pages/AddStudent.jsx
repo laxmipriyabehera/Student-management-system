@@ -32,7 +32,7 @@ function AddStudent({setStudents, editingStudent }) {
       prevStudents.map((item) =>
       item.id === editingStudent.id
     ? {
-      ...Students,
+      ...student,
       id: editingStudent.id,
       status: editingStudent.status,
     } : item 

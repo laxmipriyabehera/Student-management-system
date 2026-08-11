@@ -451,3 +451,35 @@ body {
   width: 100px;
   color: #1e293b;
 }
+.details-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.back-btn,
+.edit-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.back-btn {
+  background: #64748b;
+  color: white;
+}
+
+.back-btn:hover {
+  background: #475569;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
